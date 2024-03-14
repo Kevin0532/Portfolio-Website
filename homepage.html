@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Logo</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#programmeertalen">Programmeertalen</a>
+            <a href="#ervaringen">Ervaringen</a>
+        </nav>
+    </header>
+
+    <div class="container" id="home">
+        <h1>Welkom,</h1>
+        <h1 class="myNameText">Ik ben Kevin Versteeg &#128075;</h1>
+        <p class="introductionText">Ik ben een Student Software Developer aan de Hogeschool Utrecht</p>
+    </div>
+
+    <div class="container2" id="programmeertalen">
+        <h1 class="containerOnDarkBackground">Programmeertalen</h1>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>JavaScript</p>
+        <p>Java</p>
+        <p>Python</p>
+        <p>MySQL</p>
+    </div>
+
+    <div class="container3" id="ervaringen">
+        <h1 class="containerOnLightBackground">Ervaringen</h1>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start',
+                            inline: 'nearest'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
