@@ -1,4 +1,0 @@
-document.write() -> Schrijft de output in het leeg staande document.
-window.alert()   -> Weergeeft een alert midden in het scherm met de opgegeven input in de ()
-console.log()    -> Schrijft de output in de terminal
-
